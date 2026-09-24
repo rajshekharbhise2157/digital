@@ -26,7 +26,8 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets/vendors/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/vendors/bootstrap-select/bootstrap-select.min.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/vendors/animate/animate.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/assets/vendors/fontawesome/css/all.min.css') }}">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="{{ asset('frontend/assets/vendors/jquery-ui/jquery-ui.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/vendors/jarallax/jarallax.css') }}">
     <link rel="stylesheet"
@@ -88,191 +89,225 @@
 
         </header><!-- /.main-header -->
         @yield('content')
+        
+        <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
+
+            <span class="scroll-to-top__text">back top</span>
+
+            <span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span>
+
+        </a>
         <footer class="main-footer">
-
-            <div class="main-footer__bg" style="background-image: url(assets/images/shapes/footer-bg-1-1.png);"></div>
-
-            <div class="main-footer__shape" style="background-image: url(assets/images/shapes/footer-1-shape-1.png);">
-            </div>
-
-            <!-- /.main-footer__bg -->
-
-            <div class="main-footer__top">
-
-                <div class="container">
-
-                    <div class="row">
-
-                        <div class="col-md-6 col-xl-4">
-
-                            <div class="footer-widget footer-widget--about">
-
-                                <a href="index.html" class="footer-widget__logo">
-
-                                    <img src="assets/images/logo-light.png" width="160" alt="Growim HTML Template">
-
-                                </a>
-
-                                <p class="footer-widget__text">
-
-                                    Nullam interdum libero vitae pretium aliquam donec nibh purus laoreet in ullamcorper
-                                    vel malesuada sit amet enim.
-
-                                </p>
-
-                                <a class="growim-btn growim-btn--white" href="contact.html">
-
-                                    <span class="growim-btn__text">Contact Us</span>
-
-                                    <span class="growim-btn__icon"><i class="flaticon-up-right-arrow"></i></span>
-
-                                </a>
-
-                                <div class="footer-widget__social">
-
-                                    <p class="footer-widget__social__text">Follow on</p>
-
-                                    <a href="https://facebook.com">
-
-                                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
-
-                                        <span class="sr-only">Facebook</span>
-
-                                    </a>
-
-                                    <a href="https://twitter.com">
-
-                                        <i class="fab fa-twitter" aria-hidden="true"></i>
-
-                                        <span class="sr-only">Twitter</span>
-
-                                    </a>
-
-                                    <a href="https://www.linkedin.com/">
-
-                                        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-
-                                        <span class="sr-only">Linkedin</span>
-
-                                    </a>
-
-                                    <a href="https://youtube.com">
-
-                                        <i class="fab fa-youtube" aria-hidden="true"></i>
-
-                                        <span class="sr-only">Youtube</span>
-
-                                    </a>
-
-                                </div><!-- /.footer-widget__social -->
-
-                            </div><!-- /.footer-widget -->
-
-                        </div><!-- /.col-md-6 -->
-
-                        <div class="col-md-6 col-xl-2">
-
-                            <div class="footer-widget">
-
-                                <h2 class="footer-widget__title">Quick Link</h2><!-- /.footer-widget__title -->
-
-                                <ul class="list-unstyled footer-widget__links">
-
-                                    <li><a href="about.html">Growim About</a></li>
-
-                                    <li><a href="contact.html">Contact Us</a></li>
-
-                                    <li><a href="blog-list-right.html">Blog & News</a></li>
-
-                                    <li><a href="faq.html">FAQ’S</a></li>
-
-                                    <li><a href="login.html">Login / Register</a></li>
-
-                                </ul><!-- /.list-unstyled footer-widget__links -->
-
-                            </div><!-- /.footer-widget -->
-
-                        </div><!-- /.col-md-6 -->
-
-                        <div class="col-md-6 col-xl-2">
-
-                            <div class="footer-widget footer-widget--links">
-
-                                <h2 class="footer-widget__title">our services</h2><!-- /.footer-widget__title -->
-
-                                <ul class="list-unstyled footer-widget__links">
-
-                                    <li><a href="about.html">digital marketing</a></li>
-
-                                    <li><a href="contact.html">web development</a></li>
-
-                                    <li><a href="blog-list-right.html">SEO optimized</a></li>
-
-                                    <li><a href="faq.html">App Development</a></li>
-
-                                    <li><a href="login.html">Email Marketing</a></li>
-
-                                </ul><!-- /.list-unstyled footer-widget__links -->
-
-                            </div><!-- /.footer-widget -->
-
-                        </div><!-- /.col-md-6 -->
-
-                        <div class="col-md-6 col-xl-4">
-
-                            <div class="footer-widget footer-widget--contact">
-
-                                <h2 class="footer-widget__title">contact us</h2><!-- /.footer-widget__title -->
-
-                                <ul class="list-unstyled footer-widget__info">
-
-                                    <li><i class="flaticon-pin"></i>Gregory Cartwright, 4059 Carling Avenue, Ugglebarnby
-                                        YO22 3NJ</li>
-
-                                    <li><i class="flaticon-phone"></i><a href="tel:+61086660112">+6108-666-0112</a></li>
-
-                                    <li><i class="flaticon-email"></i><a href="mailto:info@gmail.com">info@gmail.com</a>
-                                    </li>
-
-                                </ul><!-- /.list-unstyled -->
-
-                            </div><!-- /.footer-widget -->
-
-                        </div><!-- /.col-md-6 -->
-
-                    </div><!-- /.row -->
-
-                </div><!-- /.container -->
-
-            </div><!-- /.main-footer__top -->
-
-            <div class="main-footer__bottom">
-
-                <div class="container">
-
-                    <div class="main-footer__bottom__inner">
-
-                        <p class="main-footer__copyright">
-
-                            &copy; Copyright <span class="dynamic-year"></span> by Growim HTML Template.
-
+    <div class="main-footer__bg"
+        style="background-image: url('{{ asset('frontend/assets/images/shapes/footer-bg-1-1.png') }}');">
+    </div>
+
+    <div class="main-footer__shape"
+        style="background-image: url('{{ asset('frontend/assets/images/shapes/footer-1-shape-1.png') }}');">
+    </div>
+
+    <div class="main-footer__top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 col-xl-4">
+                    <div class="footer-widget footer-widget--about">
+
+                        <a href="{{ route('website.home') }}" class="footer-widget__logo">
+                            <img src="{{ asset('frontend/assets/images/logo-light.png') }}"
+                                width="160"
+                                alt="Digital Web">
+                        </a>
+
+                        <p class="footer-widget__text">
+                            We provide professional web development, web applications,
+                            software development, UI/UX design and digital marketing
+                            solutions to help businesses grow and succeed digitally.
                         </p>
 
-                        <ul class="main-footer__bottom__menu">
+                        <a class="growim-btn growim-btn--white" href="{{ route('contact.index') }}">
+                            <span class="growim-btn__text">Contact Us</span>
+                            <span class="growim-btn__icon">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </span>
+                        </a>
 
-                            <li><a href="checkout.html">Terms & Conditions</a></li>
+                        <div class="footer-widget__social">
+                            <p class="footer-widget__social__text">Follow on</p>
 
-                            <li><a href="contact.html">Privacy Policy</a></li>
+                            <a href="https://facebook.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
 
+                            <a href="https://twitter.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+
+                            <a href="https://www.linkedin.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+
+                            <a href="https://youtube.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-2">
+                    <div class="footer-widget">
+                        <h2 class="footer-widget__title">Quick Links</h2>
+
+                        <ul class="list-unstyled footer-widget__links">
+                            <li>
+                                <a href="{{ route('website.home') }}">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    Home
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="{{ route('about.index') }}">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    About Us
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="{{ route('our-services.index') }}">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    Services
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="{{ route('contact.index') }}">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    Contact Us
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    Blog & News
+                                </a>
+                            </li>
                         </ul>
+                    </div>
+                </div>
 
-                    </div><!-- /.main-footer__inner -->
+                <div class="col-md-6 col-xl-2">
+                    <div class="footer-widget footer-widget--links">
+                        <h2 class="footer-widget__title">Our Services</h2>
 
-                </div><!-- /.container -->
+                        <ul class="list-unstyled footer-widget__links">
+                            <li>
+                                <a href="{{ route('our-services.index') }}">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    Web Development
+                                </a>
+                            </li>
 
-            </div><!-- /.main-footer__bottom -->
+                            <li>
+                                <a href="{{ route('our-services.index') }}">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    Web Applications
+                                </a>
+                            </li>
 
-        </footer><!-- /.main-footer -->
+                            <li>
+                                <a href="{{ route('our-services.index') }}">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    Software Development
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="{{ route('our-services.index') }}">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    App Development
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="{{ route('our-services.index') }}">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    Digital Marketing
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-4">
+                    <div class="footer-widget footer-widget--contact">
+                        <h2 class="footer-widget__title">Contact Us</h2>
+
+                        <ul class="list-unstyled footer-widget__info">
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>Pune, Maharashtra, India</span>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-phone"></i>
+                                <a href="tel:+919876543210">
+                                    +91 98765 43210
+                                </a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                <a href="mailto:info@digitalwebt.com">
+                                    info@digitalwebt.com
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="main-footer__bottom">
+        <div class="container">
+            <div class="main-footer__bottom__inner">
+
+                <p class="main-footer__copyright">
+                    &copy; Copyright
+                    <span class="dynamic-year"></span>
+                    Digital Web. All Rights Reserved.
+                </p>
+
+                <ul class="main-footer__bottom__menu">
+                    <li>
+                        <a href="#">Terms &amp; Conditions</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Privacy Policy</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</footer>
     </div>
     <script src="{{ asset('frontend/assets/vendors/jquery/jquery-3.7.0.min.js') }}"></script>
 <script src="{{ asset('frontend/assets/vendors/bootstrap/js/bootstrap.bundle.min.js') }}"></script>

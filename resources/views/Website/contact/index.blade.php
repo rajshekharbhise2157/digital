@@ -18,24 +18,24 @@
     <section class="contact-two">
         <div class="container">
             @if(session('success'))
-                <div class="contact-alert contact-alert--success">
-                    <i class="fas fa-check-circle"></i>
-                    <span>{{ session('success') }}</span>
-                </div>
+            <div class="contact-alert contact-alert--success">
+                <i class="fas fa-check-circle"></i>
+                <span>{{ session('success') }}</span>
+            </div>
             @endif
 
             @if($errors->any())
-                <div class="contact-alert contact-alert--error">
-                    <i class="fas fa-exclamation-circle"></i>
-                    <div>
-                        <strong>Please check the following:</strong>
-                        <ul>
-                            @foreach($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
+            <div class="contact-alert contact-alert--error">
+                <i class="fas fa-exclamation-circle"></i>
+                <div>
+                    <strong>Please check the following:</strong>
+                    <ul>
+                        @foreach($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
                 </div>
+            </div>
             @endif
 
             <div class="row">
@@ -44,7 +44,8 @@
                         <img src="{{ asset('frontend/assets/images/shapes/contact-page-1.png') }}" alt="Digital Web">
 
                         <div class="contact-two__image__video">
-                            <img src="{{ asset('frontend/assets/images/resources/contact-page-video.jpg') }}" alt="Digital Web">
+                            <img src="{{ asset('frontend/assets/images/resources/contact-page-video.jpg') }}"
+                                alt="Digital Web">
 
                             <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="video-popup">
                                 <span class="ripple"></span>
@@ -63,51 +64,32 @@
                             Send us a message and our team will get back to you.
                         </p>
 
-                        <form
-                            class="contact-two__form contact-form-validated form-one wow fadeInUp"
-                            data-wow-duration="1500ms"
-                            action="{{ route('contact.store') }}"
-                            method="POST"
-                            id="contact-form"
-                        >
+                        <form class="contact-two__form contact-form-validated form-one wow fadeInUp"
+                            data-wow-duration="1500ms" action="{{ route('contact.store') }}" method="POST"
+                            id="contact-form">
                             @csrf
 
                             <h4 class="contact-two__form__title">Get In Touch</h4>
 
                             <div class="form-one__group">
                                 <div class="form-one__control">
-                                    <input
-                                        type="text"
-                                        name="name"
-                                        value="{{ old('name') }}"
-                                        placeholder="Name"
-                                        required
-                                    >
+                                    <input type="text" name="name" value="{{ old('name') }}" placeholder="Name"
+                                        required>
                                 </div>
 
                                 <div class="form-one__control">
-                                    <input
-                                        type="email"
-                                        name="email"
-                                        value="{{ old('email') }}"
-                                        placeholder="Email Address"
-                                        required
-                                    >
+                                    <input type="email" name="email" value="{{ old('email') }}"
+                                        placeholder="Email Address" required>
                                 </div>
 
                                 <div class="form-one__control">
-                                    <input
-                                        type="tel"
-                                        name="phone"
-                                        value="{{ old('phone') }}"
-                                        placeholder="Phone Number"
-                                        required
-                                    >
+                                    <input type="tel" name="phone" value="{{ old('phone') }}" placeholder="Phone Number"
+                                        required>
                                 </div>
 
                                 <div class="form-one__control form-one__control--full">
                                     @php
-                                        $selectedServices = old('services', []);
+                                    $selectedServices = old('services', []);
                                     @endphp
 
                                     <label class="contact-service-label">
@@ -115,147 +97,92 @@
                                     </label>
 
                                     <div class="service-multiselect" id="service-multiselect">
-                                        <button
-                                            type="button"
-                                            class="service-multiselect__button"
-                                            id="service-multiselect-button"
-                                        >
+                                        <button type="button" class="service-multiselect__button"
+                                            id="service-multiselect-button">
                                             <span id="service-multiselect-text">
                                                 Select Services
                                             </span>
                                             <i class="fas fa-chevron-down"></i>
                                         </button>
 
-                                        <div
-                                            class="service-multiselect__dropdown"
-                                            id="service-multiselect-dropdown"
-                                        >
+                                        <div class="service-multiselect__dropdown" id="service-multiselect-dropdown">
                                             <label class="service-option">
-                                                <input
-                                                    type="checkbox"
-                                                    name="services[]"
-                                                    value="website-development"
-                                                    {{ in_array('website-development', $selectedServices) ? 'checked' : '' }}
-                                                >
+                                                <input type="checkbox" name="services[]" value="website-development"
+                                                    {{ in_array('website-development', $selectedServices) ? 'checked' : '' }}>
                                                 <span>
-                                                    <i class="fas fa-code"></i>
                                                     Website Development
                                                 </span>
                                             </label>
 
                                             <label class="service-option">
-                                                <input
-                                                    type="checkbox"
-                                                    name="services[]"
-                                                    value="ecommerce-development"
-                                                    {{ in_array('ecommerce-development', $selectedServices) ? 'checked' : '' }}
-                                                >
+                                                <input type="checkbox" name="services[]" value="ecommerce-development"
+                                                    {{ in_array('ecommerce-development', $selectedServices) ? 'checked' : '' }}>
                                                 <span>
-                                                    <i class="fas fa-shopping-cart"></i>
+
                                                     E-commerce Development
                                                 </span>
                                             </label>
 
                                             <label class="service-option">
-                                                <input
-                                                    type="checkbox"
-                                                    name="services[]"
-                                                    value="web-application"
-                                                    {{ in_array('web-application', $selectedServices) ? 'checked' : '' }}
-                                                >
+                                                <input type="checkbox" name="services[]" value="web-application"
+                                                    {{ in_array('web-application', $selectedServices) ? 'checked' : '' }}>
                                                 <span>
-                                                    <i class="fas fa-laptop-code"></i>
                                                     Web Application
                                                 </span>
                                             </label>
 
                                             <label class="service-option">
-                                                <input
-                                                    type="checkbox"
-                                                    name="services[]"
-                                                    value="laravel-development"
-                                                    {{ in_array('laravel-development', $selectedServices) ? 'checked' : '' }}
-                                                >
+                                                <input type="checkbox" name="services[]" value="laravel-development"
+                                                    {{ in_array('laravel-development', $selectedServices) ? 'checked' : '' }}>
                                                 <span>
-                                                    <i class="fab fa-laravel"></i>
                                                     Laravel Development
                                                 </span>
                                             </label>
 
                                             <label class="service-option">
-                                                <input
-                                                    type="checkbox"
-                                                    name="services[]"
-                                                    value="react-development"
-                                                    {{ in_array('react-development', $selectedServices) ? 'checked' : '' }}
-                                                >
+                                                <input type="checkbox" name="services[]" value="react-development"
+                                                    {{ in_array('react-development', $selectedServices) ? 'checked' : '' }}>
                                                 <span>
-                                                    <i class="fab fa-react"></i>
                                                     React Development
                                                 </span>
                                             </label>
 
                                             <label class="service-option">
-                                                <input
-                                                    type="checkbox"
-                                                    name="services[]"
-                                                    value="seo"
-                                                    {{ in_array('seo', $selectedServices) ? 'checked' : '' }}
-                                                >
+                                                <input type="checkbox" name="services[]" value="seo"
+                                                    {{ in_array('seo', $selectedServices) ? 'checked' : '' }}>
                                                 <span>
-                                                    <i class="fas fa-search"></i>
                                                     SEO
                                                 </span>
                                             </label>
 
                                             <label class="service-option">
-                                                <input
-                                                    type="checkbox"
-                                                    name="services[]"
-                                                    value="digital-marketing"
-                                                    {{ in_array('digital-marketing', $selectedServices) ? 'checked' : '' }}
-                                                >
+                                                <input type="checkbox" name="services[]" value="digital-marketing"
+                                                    {{ in_array('digital-marketing', $selectedServices) ? 'checked' : '' }}>
                                                 <span>
-                                                    <i class="fas fa-bullhorn"></i>
                                                     Digital Marketing
                                                 </span>
                                             </label>
 
                                             <label class="service-option">
-                                                <input
-                                                    type="checkbox"
-                                                    name="services[]"
-                                                    value="social-media-marketing"
-                                                    {{ in_array('social-media-marketing', $selectedServices) ? 'checked' : '' }}
-                                                >
+                                                <input type="checkbox" name="services[]" value="social-media-marketing"
+                                                    {{ in_array('social-media-marketing', $selectedServices) ? 'checked' : '' }}>
                                                 <span>
-                                                    <i class="fab fa-facebook-f"></i>
                                                     Social Media Marketing
                                                 </span>
                                             </label>
 
                                             <label class="service-option">
-                                                <input
-                                                    type="checkbox"
-                                                    name="services[]"
-                                                    value="google-ads"
-                                                    {{ in_array('google-ads', $selectedServices) ? 'checked' : '' }}
-                                                >
+                                                <input type="checkbox" name="services[]" value="google-ads"
+                                                    {{ in_array('google-ads', $selectedServices) ? 'checked' : '' }}>
                                                 <span>
-                                                    <i class="fab fa-google"></i>
                                                     Google Ads
                                                 </span>
                                             </label>
 
                                             <label class="service-option">
-                                                <input
-                                                    type="checkbox"
-                                                    name="services[]"
-                                                    value="ui-ux-design"
-                                                    {{ in_array('ui-ux-design', $selectedServices) ? 'checked' : '' }}
-                                                >
+                                                <input type="checkbox" name="services[]" value="ui-ux-design"
+                                                    {{ in_array('ui-ux-design', $selectedServices) ? 'checked' : '' }}>
                                                 <span>
-                                                    <i class="fas fa-palette"></i>
                                                     UI/UX Design
                                                 </span>
                                             </label>
@@ -263,35 +190,26 @@
                                     </div>
 
                                     @error('services')
-                                        <span class="contact-error">{{ $message }}</span>
+                                    <span class="contact-error">{{ $message }}</span>
                                     @enderror
 
                                     @error('services.*')
-                                        <span class="contact-error">{{ $message }}</span>
+                                    <span class="contact-error">{{ $message }}</span>
                                     @enderror
                                 </div>
 
                                 <div class="form-one__control form-one__control--full">
-                                    <textarea
-                                        name="message"
-                                        placeholder="Write Message . . ."
-                                        required
-                                    >{{ old('message') }}</textarea>
+                                    <textarea name="message" placeholder="Write Message . . ."
+                                        required>{{ old('message') }}</textarea>
                                 </div>
 
                                 <div class="form-one__control form-one__control--full">
-                                    <button
-                                        class="growim-btn"
-                                        type="submit"
-                                        id="contact-submit-button"
-                                    >
+                                    <button class="growim-btn" type="submit" id="contact-submit-button">
                                         <span class="growim-btn__text">
                                             Send Message
                                         </span>
 
-                                        <span class="growim-btn__icon">
-                                            <i class="flaticon-up-right-arrow"></i>
-                                        </span>
+                                      
                                     </button>
                                 </div>
                             </div>
@@ -304,12 +222,9 @@
 
     <section class="google-map">
         <div class="google-map__contact">
-            <iframe
-                title="Digital Web Location"
+            <iframe title="Digital Web Location"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4562.753041141002!2d-118.80123790098536!3d34.152323469614075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco+Wholesale!5e0!3m2!1sbn!2sbd!4v1562518641290!5m2!1sbn!2sbd"
-                class="map__contact"
-                allowfullscreen
-            ></iframe>
+                class="map__contact" allowfullscreen></iframe>
         </div>
 
         <div class="google-map__wrapper">
@@ -503,7 +418,7 @@
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     const multiselect = document.getElementById('service-multiselect');
     const button = document.getElementById('service-multiselect-button');
     const text = document.getElementById('service-multiselect-text');
@@ -513,10 +428,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function updateSelectedServices() {
         const selected = Array.from(checkboxes)
-            .filter(function (checkbox) {
+            .filter(function(checkbox) {
                 return checkbox.checked;
             })
-            .map(function (checkbox) {
+            .map(function(checkbox) {
                 return checkbox.nextElementSibling.textContent.trim();
             });
 
@@ -532,25 +447,25 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    button.addEventListener('click', function (event) {
+    button.addEventListener('click', function(event) {
         event.stopPropagation();
         multiselect.classList.toggle('open');
     });
 
-    checkboxes.forEach(function (checkbox) {
-        checkbox.addEventListener('change', function () {
+    checkboxes.forEach(function(checkbox) {
+        checkbox.addEventListener('change', function() {
             updateSelectedServices();
         });
     });
 
-    document.addEventListener('click', function (event) {
+    document.addEventListener('click', function(event) {
         if (!multiselect.contains(event.target)) {
             multiselect.classList.remove('open');
         }
     });
 
-    form.addEventListener('submit', function (event) {
-        const selectedServices = Array.from(checkboxes).filter(function (checkbox) {
+    form.addEventListener('submit', function(event) {
+        const selectedServices = Array.from(checkboxes).filter(function(checkbox) {
             return checkbox.checked;
         });
 
